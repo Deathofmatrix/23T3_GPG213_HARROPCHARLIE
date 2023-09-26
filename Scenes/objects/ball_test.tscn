@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7hebgj2b0eq5"]
+
+[ext_resource type="Script" path="res://Scenes/objects/ball.gd" id="1_e8cr0"]
+[ext_resource type="Texture2D" uid="uid://c8t7tu6p43rg8" path="res://Pixel Platformer/Tiles/tile_0151.png" id="2_2hcu4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jt5th"]
+radius = 7.0
+
+[node name="Ball" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 31
+script = ExtResource("1_e8cr0")
+air_resistance = 50
+bounce = 0.95
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_2hcu4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jt5th")
