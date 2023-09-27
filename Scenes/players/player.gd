@@ -11,7 +11,8 @@ extends CharacterBody2D
 
 
 var can_kick: bool = true
-var direction_facing: Vector2 = Vector2.ZERO
+var direction_facing: Vector2 = Vector2.RIGHT
+var last_horizontal_direction_facing = Vector2.RIGHT
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var current_gravity_scale: float
 var stored_wall_normal = Vector2.ZERO
@@ -26,6 +27,7 @@ func _physics_process(delta):
 	handle_air_acceleration(input_axis, delta)
 	apply_air_resistance(input_axis, delta)
 	update_animations(input_axis)
+	update_direction_facing(input_axis)
 	var was_on_wall = is_on_wall_only()
 	if was_on_wall:
 		stored_wall_normal = get_wall_normal()
@@ -35,7 +37,7 @@ func _physics_process(delta):
 	if just_left_wall:
 		wall_jump_timer.start()
 		
-	check_direction_input()
+#	check_direction_input()
 
 func apply_gravity(delta):
 	if not is_on_floor():
@@ -88,12 +90,21 @@ func update_animations(input_axis):
 		pass
 #		print("play jump animation")
 
+func update_direction_facing(input_axis):
+	var vertical_input = Input.get_axis(input_data.up, input_data.down)
+	if input_axis:
+		direction_facing = Vector2(input_axis, 0)
+		last_horizontal_direction_facing = direction_facing
+	elif vertical_input:
+		direction_facing = Vector2(0,vertical_input)
+	else:
+		direction_facing = last_horizontal_direction_facing
 
 func header():
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
-		if collision.get_collider().name == "Ball2":
-			collision.get_collider().push_ball(Vector2(0, -200))
+		if collision.get_collider().name == "Ball":
+			collision.get_collider().push_ball(Vector2(last_horizontal_direction_facing.x * movement_data.kick_power / 2, -200), $".")
 
 
 
@@ -107,28 +118,11 @@ func _on_kick_hit_box_body_entered(body: CharacterBody2D):
 	var kick_direction: Vector2 = direction_facing
 	if direction_facing == Vector2.LEFT or direction_facing == Vector2.RIGHT:
 		kick_direction += Vector2(0, -0.8)
-	elif direction_facing == Vector2.DOWN:
-		direction_facing = Vector2.UP
-#	body.linear_velocity = Vector2.ZERO
+#	elif direction_facing == Vector2.DOWN:
+#		direction_facing = Vector2.UP
 	body.velocity = kick_direction * movement_data.kick_power
-	
-
-func check_direction_input():
-	if Input.is_action_pressed(input_data.up):
-#		print("up")
-		direction_facing = Vector2.UP
-	elif Input.is_action_pressed(input_data.down):
-#		print("down")
-		direction_facing = Vector2.DOWN
-	elif Input.is_action_pressed(input_data.left):
-#		print("left")
-		direction_facing = Vector2.LEFT
-	elif Input.is_action_pressed(input_data.right):
-#		print("right")
-		direction_facing = Vector2.RIGHT
 
 func kick():
-	check_direction_input()
 	if can_kick == true:
 		can_kick = false
 		kick_hit_box.rotation = direction_facing.angle()

@@ -7,6 +7,7 @@ extends CharacterBody2D
 @export var air_resistance = 200
 @export var bounce = 0.6
 
+var previous_player_collided = null
 var collision: KinematicCollision2D
 var direction = Vector2.ZERO
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -42,7 +43,13 @@ func apply_air_resistance(delta):
 func handle_bounce(collision_info):
 	if collision_info:
 		velocity = velocity.bounce(collision_info.get_normal()) * bounce
-		
 
-func push_ball(velocity_vector):
+func push_ball(velocity_vector, player_node):
 	velocity = velocity_vector
+	add_collision_exception_with(player_node)
+	previous_player_collided = player_node
+	$Timer.start()
+
+func _on_timer_timeout():
+	remove_collision_exception_with(previous_player_collided)
+	previous_player_collided = null

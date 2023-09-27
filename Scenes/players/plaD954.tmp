@@ -49,9 +49,7 @@ height = 20.8333
 size = Vector2(30, 19.2)
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("kick_hit_box", "player_sprite", "wall_jump_timer")]
-process_physics_priority = 1
 collision_mask = 21
-platform_on_leave = 2
 script = ExtResource("1_5hr77")
 movement_data = ExtResource("2_iqu38")
 input_data = ExtResource("3_nuguw")
