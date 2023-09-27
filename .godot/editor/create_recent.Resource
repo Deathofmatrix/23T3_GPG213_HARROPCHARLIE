@@ -1,2 +1,3 @@
-PlayerMovementData
+PlayerInputData
 Resource
+PlayerMovementData

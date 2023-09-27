@@ -1,5 +1,9 @@
-res://Scenes/players/player.tscn
-res://Scenes/players/player.gd
 res://Scenes/levels/main_level.tscn
+res://Scenes/players/player.tscn
 res://Scenes/objects/ball_test.tscn
 res://Scenes/objects/ball.tscn
+res://Scenes/objects/ball.gd
+res://Scenes/players/player.gd
+res://Resources/player_input_data.gd
+res://Resources/p1_input.tres
+res://Resources/p2_input.tres

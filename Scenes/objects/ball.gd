@@ -40,13 +40,9 @@ func apply_air_resistance(delta):
 		velocity.x = move_toward(velocity.x, 0, air_resistance * delta)
 
 func handle_bounce(collision_info):
-#	var edge_normal = Vector2.ZERO
-#	if is_on_floor() or is_on_wall():
-#		if is_on_floor(): edge_normal = get_floor_normal()
-#		elif is_on_wall(): edge_normal = get_wall_normal()
-#
-#		var bounce_calc = edge_normal.reflect(velocity)
-#		velocity *= bounce_calc
 	if collision_info:
 		velocity = velocity.bounce(collision_info.get_normal()) * bounce
 		
+
+func push_ball(velocity_vector):
+	velocity = velocity_vector
