@@ -4,11 +4,11 @@ extends CharacterBody2D
 
 @export var movement_data : PlayerMovementData
 @export var input_data : PlayerInputData
-
 @export var kick_hit_box: KickHitBox
 @export var player_sprite: AnimatedSprite2D
 @export var wall_jump_timer: Timer
-
+@export var is_stunned = false
+@export var player_colour = Color.WHITE
 
 var can_kick: bool = true
 var direction_facing: Vector2 = Vector2.RIGHT
@@ -17,17 +17,21 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var current_gravity_scale: float
 var stored_wall_normal = Vector2.ZERO
 
+func _ready():
+	$PlayerSprite.self_modulate = player_colour
+
 func _physics_process(delta):
 	apply_gravity(delta)
-	handle_wall_jump()
-	handle_jump()
-	var input_axis = Input.get_axis(input_data.left, input_data.right)
-	handle_acceleration(input_axis, delta)
-	apply_friction(input_axis, delta)
-	handle_air_acceleration(input_axis, delta)
-	apply_air_resistance(input_axis, delta)
-	update_animations(input_axis)
-	update_direction_facing(input_axis)
+	if not is_stunned:
+		handle_wall_jump()
+		handle_jump()
+		var input_axis = Input.get_axis(input_data.left, input_data.right)
+		handle_acceleration(input_axis, delta)
+		apply_friction(input_axis, delta)
+		handle_air_acceleration(input_axis, delta)
+		apply_air_resistance(input_axis, delta)
+		update_animations(input_axis)
+		update_direction_facing(input_axis)
 	var was_on_wall = is_on_wall_only()
 	if was_on_wall:
 		stored_wall_normal = get_wall_normal()
@@ -92,11 +96,11 @@ func update_animations(input_axis):
 
 func update_direction_facing(input_axis):
 	var vertical_input = Input.get_axis(input_data.up, input_data.down)
-	if input_axis:
+	if vertical_input:
+		direction_facing = Vector2(0,vertical_input)
+	elif input_axis:
 		direction_facing = Vector2(input_axis, 0)
 		last_horizontal_direction_facing = direction_facing
-	elif vertical_input:
-		direction_facing = Vector2(0,vertical_input)
 	else:
 		direction_facing = last_horizontal_direction_facing
 
@@ -105,6 +109,7 @@ func header():
 		var collision = get_slide_collision(i)
 		if collision.get_collider().name == "Ball":
 			collision.get_collider().push_ball(Vector2(last_horizontal_direction_facing.x * movement_data.kick_power / 2, -200), $".")
+			%HeaderSound.play()
 
 
 
@@ -114,13 +119,14 @@ func _input(event):
 		kick()
 
 func _on_kick_hit_box_body_entered(body: CharacterBody2D):
+	if body == $".": return
 	print(body)
 	var kick_direction: Vector2 = direction_facing
 	if direction_facing == Vector2.LEFT or direction_facing == Vector2.RIGHT:
-		kick_direction += Vector2(0, -0.8)
-#	elif direction_facing == Vector2.DOWN:
-#		direction_facing = Vector2.UP
+		kick_direction += Vector2(0, -0.6)
 	body.velocity = kick_direction * movement_data.kick_power
+	%KickSound.play()
+
 
 func kick():
 	if can_kick == true:
@@ -134,3 +140,6 @@ func kick():
 func _on_timer_timeout():
 	can_kick = true
 	kick_hit_box.monitoring = false
+
+func stun():
+	is_stunned = true

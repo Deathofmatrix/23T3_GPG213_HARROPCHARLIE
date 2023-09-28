@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://uw44hril35oe"
+path="res://.godot/imported/Alpha Dance.ogg-eeeebb1fa90f0215c969a3c43b0f52cb.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/Alpha Dance.ogg"
+dest_files=["res://.godot/imported/Alpha Dance.ogg-eeeebb1fa90f0215c969a3c43b0f52cb.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://xy7qnmqvq83"]
+
+[ext_resource type="Script" path="res://Scenes/levels/victory_screen.gd" id="1_2ulkf"]
+[ext_resource type="AudioStream" uid="uid://b1goxe3et6323" path="res://sfx/congratulations.ogg" id="2_wcsa0"]
+[ext_resource type="AudioStream" uid="uid://uw44hril35oe" path="res://music/Alpha Dance.ogg" id="3_f7ctp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8c78j"]
+font_size = 25
+
+[node name="VictoryScreen" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2ulkf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="WinnerText" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+label_settings = SubResource("LabelSettings_8c78j")
+uppercase = true
+
+[node name="PlayAgainButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Play Again"
+
+[node name="MainMenuButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Main Menu"
+
+[node name="CongratulationsSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_wcsa0")
+autoplay = true
+panning_strength = 0.0
+bus = &"SFX"
+
+[node name="MusicAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_f7ctp")
+autoplay = true
+panning_strength = 0.0
+bus = &"SFX"
+
+[node name="PlayerInputDisableTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[connection signal="pressed" from="VBoxContainer/PlayAgainButton" to="." method="_on_play_again_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="timeout" from="PlayerInputDisableTimer" to="." method="_on_player_input_disable_timer_timeout"]

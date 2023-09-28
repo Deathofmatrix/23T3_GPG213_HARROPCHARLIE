@@ -1,0 +1,208 @@
+[gd_scene load_steps=15 format=3 uid="uid://3ofmfgfsqdhb"]
+
+[ext_resource type="Script" path="res://Scenes/levels/start_menu.gd" id="1_ofcvc"]
+[ext_resource type="Texture2D" uid="uid://4jqg6exifrp4" path="res://KeybindSprites/W_Key_Dark.png" id="2_ptgos"]
+[ext_resource type="Texture2D" uid="uid://be2w4j1st27n4" path="res://KeybindSprites/A_Key_Dark.png" id="3_2kyrf"]
+[ext_resource type="Texture2D" uid="uid://cl70ffb2dlui" path="res://KeybindSprites/S_Key_Dark.png" id="4_tfmxx"]
+[ext_resource type="Texture2D" uid="uid://d0qndo5v11vg5" path="res://KeybindSprites/D_Key_Dark.png" id="5_1x86x"]
+[ext_resource type="Texture2D" uid="uid://d1o4duit41jp2" path="res://KeybindSprites/C_Key_Dark.png" id="6_86l7q"]
+[ext_resource type="Texture2D" uid="uid://cicdxp6ty60o4" path="res://KeybindSprites/V_Key_Dark.png" id="7_xkksm"]
+[ext_resource type="Texture2D" uid="uid://m2ushhvgm4fr" path="res://KeybindSprites/I_Key_Light.png" id="8_v3bqk"]
+[ext_resource type="Texture2D" uid="uid://bmim28f1irxeh" path="res://KeybindSprites/J_Key_Light.png" id="9_pqovv"]
+[ext_resource type="Texture2D" uid="uid://drpdpgw4cl6m2" path="res://KeybindSprites/K_Key_Light.png" id="10_2rs7e"]
+[ext_resource type="Texture2D" uid="uid://bdgshha21fcji" path="res://KeybindSprites/L_Key_Light.png" id="11_3rsfd"]
+[ext_resource type="Texture2D" uid="uid://8kkdokj2mp0w" path="res://KeybindSprites/Full_Stop_White_Normal.png" id="12_h73ec"]
+[ext_resource type="Texture2D" uid="uid://bvkax5owboki1" path="res://KeybindSprites/Forward_Slash_White_Normal.png" id="13_ldllp"]
+[ext_resource type="AudioStream" uid="uid://dr5d810qy0tp2" path="res://music/despot.wav" id="14_3hos1"]
+
+[node name="StartMenu" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ofcvc")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="P1Controls" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_constants/separation = -5
+alignment = 1
+
+[node name="W" type="HBoxContainer" parent="HBoxContainer/P1Controls"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = -5
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/P1Controls/W"]
+layout_mode = 2
+texture = ExtResource("2_ptgos")
+expand_mode = 2
+
+[node name="ASD" type="HBoxContainer" parent="HBoxContainer/P1Controls"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = -5
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/P1Controls/ASD"]
+layout_mode = 2
+texture = ExtResource("3_2kyrf")
+expand_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer/P1Controls/ASD"]
+layout_mode = 2
+texture = ExtResource("4_tfmxx")
+expand_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer/P1Controls/ASD"]
+layout_mode = 2
+texture = ExtResource("5_1x86x")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/P1Controls"]
+layout_mode = 2
+text = "MOVE"
+horizontal_alignment = 1
+
+[node name="C" type="HBoxContainer" parent="HBoxContainer/P1Controls"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = -5
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/P1Controls/C"]
+layout_mode = 2
+texture = ExtResource("6_86l7q")
+expand_mode = 2
+
+[node name="Label2" type="Label" parent="HBoxContainer/P1Controls"]
+layout_mode = 2
+text = "JUMP"
+horizontal_alignment = 1
+
+[node name="V" type="HBoxContainer" parent="HBoxContainer/P1Controls"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = -5
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/P1Controls/V"]
+layout_mode = 2
+texture = ExtResource("7_xkksm")
+expand_mode = 2
+
+[node name="Label3" type="Label" parent="HBoxContainer/P1Controls"]
+layout_mode = 2
+text = "SHOOT"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="StartGameButton" type="Button" parent="HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Start Game"
+
+[node name="QuitButton" type="Button" parent="HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Quit"
+
+[node name="P2Controls" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = -5
+alignment = 1
+
+[node name="I" type="HBoxContainer" parent="HBoxContainer/P2Controls"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = -5
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/P2Controls/I"]
+layout_mode = 2
+texture = ExtResource("8_v3bqk")
+expand_mode = 2
+
+[node name="JKL" type="HBoxContainer" parent="HBoxContainer/P2Controls"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = -5
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/P2Controls/JKL"]
+layout_mode = 2
+texture = ExtResource("9_pqovv")
+expand_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer/P2Controls/JKL"]
+layout_mode = 2
+texture = ExtResource("10_2rs7e")
+expand_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer/P2Controls/JKL"]
+layout_mode = 2
+texture = ExtResource("11_3rsfd")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/P2Controls"]
+layout_mode = 2
+text = "MOVE"
+horizontal_alignment = 1
+
+[node name="FULLSTOP" type="HBoxContainer" parent="HBoxContainer/P2Controls"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = -5
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/P2Controls/FULLSTOP"]
+layout_mode = 2
+texture = ExtResource("12_h73ec")
+expand_mode = 2
+
+[node name="Label2" type="Label" parent="HBoxContainer/P2Controls"]
+layout_mode = 2
+text = "JUMP"
+horizontal_alignment = 1
+
+[node name="SLASH" type="HBoxContainer" parent="HBoxContainer/P2Controls"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = -5
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/P2Controls/SLASH"]
+layout_mode = 2
+texture = ExtResource("13_ldllp")
+expand_mode = 2
+
+[node name="Label3" type="Label" parent="HBoxContainer/P2Controls"]
+layout_mode = 2
+text = "SHOOT"
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_3hos1")
+volume_db = 5.0
+autoplay = true
+bus = &"MainMenu"
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

@@ -4,7 +4,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_idx4a"]
 font_size = 32
-outline_size = 3
+outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_3y62k"]
@@ -12,7 +12,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CenterContainer/Label:label_settings:font_size")
+tracks/0/path = NodePath("CenterContainer/GoalLabel:label_settings:font_size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -24,7 +24,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CenterContainer/Label:visible")
+tracks/1/path = NodePath("CenterContainer/GoalLabel:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -40,7 +40,7 @@ length = 1.9
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CenterContainer/Label:label_settings:font_size")
+tracks/0/path = NodePath("CenterContainer/GoalLabel:label_settings:font_size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -52,7 +52,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CenterContainer/Label:visible")
+tracks/1/path = NodePath("CenterContainer/GoalLabel:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -85,7 +85,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="CenterContainer"]
+[node name="GoalLabel" type="Label" parent="CenterContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "GOAL!!!!"
 label_settings = SubResource("LabelSettings_idx4a")

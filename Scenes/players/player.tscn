@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://hebbgcokkspd"]
+[gd_scene load_steps=15 format=3 uid="uid://hebbgcokkspd"]
 
 [ext_resource type="Script" path="res://Scenes/players/player.gd" id="1_5hr77"]
 [ext_resource type="Texture2D" uid="uid://dfxs5mjl8hsqu" path="res://icon.svg" id="1_v3fbg"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://ci2bfhx80632r" path="res://Sprites/character_test-Sheet.png" id="3_gw7sm"]
 [ext_resource type="Resource" uid="uid://6hsq1f25an7d" path="res://Resources/default_input_data.tres" id="3_nuguw"]
 [ext_resource type="Script" path="res://Scenes/players/KickHitBox.gd" id="3_xyr3t"]
+[ext_resource type="AudioStream" uid="uid://6vlyibalqp50" path="res://sfx/footstep_wood_004.ogg" id="5_y1l24"]
+[ext_resource type="AudioStream" uid="uid://c1ow66wc4ru8k" path="res://sfx/impactSoft_heavy_000.ogg" id="8_65fqy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2at0l"]
 atlas = ExtResource("3_gw7sm")
@@ -50,8 +52,9 @@ size = Vector2(30, 19.2)
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("kick_hit_box", "player_sprite", "wall_jump_timer")]
 process_physics_priority = 1
-collision_mask = 21
+collision_mask = 20
 platform_on_leave = 2
+safe_margin = 1.0
 script = ExtResource("1_5hr77")
 movement_data = ExtResource("2_iqu38")
 input_data = ExtResource("3_nuguw")
@@ -74,9 +77,16 @@ debug_color = Color(0, 0.6, 0.701961, 0.419608)
 wait_time = 0.2
 one_shot = true
 
+[node name="HeaderSound" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_y1l24")
+volume_db = 10.0
+pitch_scale = 1.5
+bus = &"SFX"
+
 [node name="KickHitBox" type="Area2D" parent="."]
 collision_layer = 2
-collision_mask = 4
+collision_mask = 5
 monitoring = false
 script = ExtResource("3_xyr3t")
 
@@ -85,13 +95,21 @@ position = Vector2(15, 0)
 shape = SubResource("RectangleShape2D_ykewq")
 
 [node name="Sprite2D" type="Sprite2D" parent="KickHitBox"]
+visible = false
 position = Vector2(24, 0.4)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_v3fbg")
 
 [node name="KickTimer" type="Timer" parent="KickHitBox"]
-wait_time = 0.3
+wait_time = 0.4
 one_shot = true
+
+[node name="KickSound" type="AudioStreamPlayer2D" parent="KickHitBox"]
+unique_name_in_owner = true
+stream = ExtResource("8_65fqy")
+volume_db = 10.0
+pitch_scale = 2.0
+bus = &"SFX"
 
 [connection signal="body_entered" from="KickHitBox" to="." method="_on_kick_hit_box_body_entered"]
 [connection signal="timeout" from="KickHitBox/KickTimer" to="." method="_on_timer_timeout"]
