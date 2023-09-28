@@ -1,0 +1,15 @@
+res://Resources/default_input_data.tres::515d806800d2147c7481d5bba0d509f7::1695803184::res://.godot/exported/133200997/export-40cf34952a8a99c39f007c187f231a80-default_input_data.res
+res://Resources/default_movement_data.tres::3ac348d05dc1f0fef5030d52c21f90fc::1695570490::res://.godot/exported/133200997/export-b98d0c03f7c2cfa8c8a7c9ebe6b2380f-default_movement_data.res
+res://Resources/p1_input.tres::05b4f5fe628ac3941785d1367a3c2900::1695803184::res://.godot/exported/133200997/export-8a006af5936cdbe37091020be3ac3372-p1_input.res
+res://Resources/p2_input.tres::26863c49234e659b42599deea1242c1f::1695803184::res://.godot/exported/133200997/export-72d319672a7ff25263e97127bac9a8dc-p2_input.res
+res://Resources/testing_player_data.tres::e9b4209f1e97db6992a5caa371d3a89c::1695743833::res://.godot/exported/133200997/export-7f4bfeb3798a188bdd54d9b4b48ea5fd-testing_player_data.res
+res://Scenes/levels/main_level.tscn::70c6e7e1554fb9f71eda729006494da1::1695914179::res://.godot/exported/133200997/export-0c608e9eb4a64899b1f09abd1505438a-main_level.scn
+res://Scenes/levels/main_tilemap.tres::ec6b7205b4c5fb739425902e2810f1a7::1695914179::res://.godot/exported/133200997/export-e290ab6a4fff24737139bad9b571a4cb-main_tilemap.res
+res://Scenes/levels/start_menu.tscn::0d8c843bb0c6bd6e638c103f953f70cb::1695913003::res://.godot/exported/133200997/export-3c375d210284e6a76cc961a34e278d34-start_menu.scn
+res://Scenes/levels/victory_screen.tscn::6abcb1cc7094e3803b5fbbaf34be55d3::1695913024::res://.godot/exported/133200997/export-26c219efc13c6d1689a96ce6bb1e7700-victory_screen.scn
+res://Scenes/objects/ball.tscn::82f813c9d835265465de3ed22add98c6::1695913003::res://.godot/exported/133200997/export-eab13f1a340e43bef910c42a65eab54a-ball.scn
+res://Scenes/objects/ball_old.tscn::aa897d19248e37b53eafd970b00374e6::1695806857::res://.godot/exported/133200997/export-3bfcd79340b06c26d34fdc11b5692f42-ball_old.scn
+res://Scenes/objects/goal.tscn::8a750b3af22e5082556b30d7a098e23e::1695913003::res://.godot/exported/133200997/export-23783c7ad3d6d900b4913708145d5278-goal.scn
+res://Scenes/players/player.tscn::99b345dee36995caeafdc78183a66632::1695913003::res://.godot/exported/133200997/export-53b7394117cb991b7d76eb9563beaf6f-player.scn
+res://Scenes/UI/goal_ui.tscn::359965d4a4016d8c720625c805b3dcb1::1695913003::res://.godot/exported/133200997/export-f7ceed3c0f532bad803b323fc287beb6-goal_ui.scn
+res://default_bus_layout.tres::529249428a2f4f0fbd6cbfe976070ef6::1695913590::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res

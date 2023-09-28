@@ -1,6 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1695910678
-default_bus_layout.tres::AudioBusLayout::666883230756703307::1695910448::0::1::::<><>::
+::res://::1695913588
+default_bus_layout.tres::AudioBusLayout::666883230756703307::1695912595::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1695913409::0::1::::<><>::
 icon.svg::CompressedTexture2D::7558834082027409892::1695386384::1695386388::1::::<><>::
 maxresdefault.jpg::CompressedTexture2D::3236286989454020594::1695537405::1695537405::1::::<><>::
 README.md::TextFile::-1::1695746001::0::1::::<><>::
@@ -266,29 +267,29 @@ player_input_data.gd::GDScript::-1::1695803184::0::1::::PlayerInputData<>Resourc
 player_movement_data.gd::GDScript::-1::1695571360::0::1::::PlayerMovementData<>Resource<>::
 testing_player_data.tres::Resource/Resource::1966999178899449623::1695743833::0::1::::<><>::res://Resources/player_movement_data.gd
 ::res://Scenes/::1695812966
-::res://Scenes/levels/::1695910510
-main_level.gd::GDScript::-1::1695910047::0::1::::<>Node2D<>::
-main_level.tscn::PackedScene::8660586037957803073::1695910510::0::1::::<><>::uid://bmdxf6ar7es4q::::res://maxresdefault.jpg<>res://Scenes/levels/main_level.gd<>uid://dr5d810qy0tp2::::res://music/despot.wav<>uid://bt1310587hy1c::::res://sfx/3.ogg<>uid://hebbgcokkspd::::res://Scenes/players/player.tscn<>uid://bnnlwwx5w05vv::::res://sfx/2.ogg<>uid://b7hebgj2b0eq5::::res://Scenes/objects/ball.tscn<>uid://cicro8n0cgthp::::res://sfx/1.ogg<>uid://tpa22eisq3h::::res://sfx/go.ogg<>uid://b63bkycylkg62::::res://Resources/p1_input.tres<>uid://b0d2q6lxrm50h::::res://Resources/p2_input.tres<>uid://chn2tyn50tx2w::::res://Scenes/levels/main_tilemap.tres<>uid://co6gtyvxjonqg::::res://Scenes/UI/goal_ui.tscn<>uid://pcymucsovt75::::res://Scenes/objects/goal.tscn
+::res://Scenes/levels/::1695913518
+main_level.gd::GDScript::-1::1695912317::0::1::::<>Node2D<>::
+main_level.tscn::PackedScene::8660586037957803073::1695913518::0::1::::<><>::uid://bmdxf6ar7es4q::::res://maxresdefault.jpg<>res://Scenes/levels/main_level.gd<>uid://dr5d810qy0tp2::::res://music/despot.wav<>uid://bt1310587hy1c::::res://sfx/3.ogg<>uid://hebbgcokkspd::::res://Scenes/players/player.tscn<>uid://bnnlwwx5w05vv::::res://sfx/2.ogg<>uid://b7hebgj2b0eq5::::res://Scenes/objects/ball.tscn<>uid://cicro8n0cgthp::::res://sfx/1.ogg<>uid://tpa22eisq3h::::res://sfx/go.ogg<>uid://b63bkycylkg62::::res://Resources/p1_input.tres<>uid://b0d2q6lxrm50h::::res://Resources/p2_input.tres<>uid://chn2tyn50tx2w::::res://Scenes/levels/main_tilemap.tres<>uid://co6gtyvxjonqg::::res://Scenes/UI/goal_ui.tscn<>uid://pcymucsovt75::::res://Scenes/objects/goal.tscn
 main_tilemap.tres::TileSet::5292674754584199728::1695899493::0::1::::<><>::uid://dvdvd4lxcy2mv::::res://Sprites/tilemap-base.png
 start_menu.gd::GDScript::-1::1695903159::0::1::::<>CenterContainer<>::
-start_menu.tscn::PackedScene::1994514197049875643::1695910448::0::1::::<><>::res://Scenes/levels/start_menu.gd<>uid://4jqg6exifrp4::::res://KeybindSprites/W_Key_Dark.png<>uid://be2w4j1st27n4::::res://KeybindSprites/A_Key_Dark.png<>uid://cl70ffb2dlui::::res://KeybindSprites/S_Key_Dark.png<>uid://d0qndo5v11vg5::::res://KeybindSprites/D_Key_Dark.png<>uid://d1o4duit41jp2::::res://KeybindSprites/C_Key_Dark.png<>uid://cicdxp6ty60o4::::res://KeybindSprites/V_Key_Dark.png<>uid://m2ushhvgm4fr::::res://KeybindSprites/I_Key_Light.png<>uid://bmim28f1irxeh::::res://KeybindSprites/J_Key_Light.png<>uid://drpdpgw4cl6m2::::res://KeybindSprites/K_Key_Light.png<>uid://bdgshha21fcji::::res://KeybindSprites/L_Key_Light.png<>uid://8kkdokj2mp0w::::res://KeybindSprites/Full_Stop_White_Normal.png<>uid://bvkax5owboki1::::res://KeybindSprites/Forward_Slash_White_Normal.png<>uid://dr5d810qy0tp2::::res://music/despot.wav
-victory_screen.gd::GDScript::-1::1695907834::0::1::::<>CenterContainer<>::
-victory_screen.tscn::PackedScene::48995902598237862::1695910448::0::1::::<><>::res://Scenes/levels/victory_screen.gd<>uid://b1goxe3et6323::::res://sfx/congratulations.ogg<>uid://uw44hril35oe::::res://music/Alpha Dance.ogg
+start_menu.tscn::PackedScene::1994514197049875643::1695913003::0::1::::<><>::res://Scenes/levels/start_menu.gd<>uid://4jqg6exifrp4::::res://KeybindSprites/W_Key_Dark.png<>uid://be2w4j1st27n4::::res://KeybindSprites/A_Key_Dark.png<>uid://cl70ffb2dlui::::res://KeybindSprites/S_Key_Dark.png<>uid://d0qndo5v11vg5::::res://KeybindSprites/D_Key_Dark.png<>uid://d1o4duit41jp2::::res://KeybindSprites/C_Key_Dark.png<>uid://cicdxp6ty60o4::::res://KeybindSprites/V_Key_Dark.png<>uid://m2ushhvgm4fr::::res://KeybindSprites/I_Key_Light.png<>uid://bmim28f1irxeh::::res://KeybindSprites/J_Key_Light.png<>uid://drpdpgw4cl6m2::::res://KeybindSprites/K_Key_Light.png<>uid://bdgshha21fcji::::res://KeybindSprites/L_Key_Light.png<>uid://8kkdokj2mp0w::::res://KeybindSprites/Full_Stop_White_Normal.png<>uid://bvkax5owboki1::::res://KeybindSprites/Forward_Slash_White_Normal.png<>uid://dr5d810qy0tp2::::res://music/despot.wav
+victory_screen.gd::GDScript::-1::1695913001::0::1::::<>CenterContainer<>::
+victory_screen.tscn::PackedScene::48995902598237862::1695913024::0::1::::<><>::res://Scenes/levels/victory_screen.gd<>uid://b1goxe3et6323::::res://sfx/congratulations.ogg<>uid://uw44hril35oe::::res://music/Alpha Dance.ogg
 ::res://Scenes/misc/::1695907461
 Events.gd::GDScript::-1::1695907461::0::1::::<>Node<>::
-::res://Scenes/objects/::1695910448
+::res://Scenes/objects/::1695913003
 ball.gd::GDScript::-1::1695814636::0::1::::Ball<>CharacterBody2D<>::
-ball.tscn::PackedScene::4647159308425947718::1695910448::0::1::::<><>::res://Scenes/objects/ball.gd<>uid://c8t7tu6p43rg8::::res://Pixel Platformer/Tiles/tile_0151.png
+ball.tscn::PackedScene::4647159308425947718::1695913003::0::1::::<><>::res://Scenes/objects/ball.gd<>uid://c8t7tu6p43rg8::::res://Pixel Platformer/Tiles/tile_0151.png
 ball_old.tscn::PackedScene::7952138069040611170::1695806857::0::1::::<><>::uid://c8t7tu6p43rg8
 goal.gd::GDScript::-1::1695908301::0::1::::<>Area2D<>::
-goal.tscn::PackedScene::1058441101825865714::1695910448::0::1::::<><>::res://Scenes/objects/goal.gd<>uid://cyyjbq5cl7oo7::::res://sfx/GOAL.wav
-::res://Scenes/players/::1695910448
+goal.tscn::PackedScene::1058441101825865714::1695913003::0::1::::<><>::res://Scenes/objects/goal.gd<>uid://cyyjbq5cl7oo7::::res://sfx/GOAL.wav
+::res://Scenes/players/::1695913003
 KickHitBox.gd::GDScript::-1::1695874866::0::1::::KickHitBox<>Area2D<>::
-player.gd::GDScript::-1::1695903028::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::499642238148720505::1695910448::0::1::::<><>::res://Scenes/players/player.gd<>uid://dfxs5mjl8hsqu::::res://icon.svg<>uid://3a3goufrtr1x::::res://Resources/testing_player_data.tres<>uid://ci2bfhx80632r::::res://Sprites/character_test-Sheet.png<>uid://6hsq1f25an7d::::res://Resources/default_input_data.tres<>res://Scenes/players/KickHitBox.gd
-::res://Scenes/UI/::1695910448
+player.gd::GDScript::-1::1695910773::0::1::::Player<>CharacterBody2D<>::
+player.tscn::PackedScene::499642238148720505::1695913003::0::1::::<><>::res://Scenes/players/player.gd<>uid://dfxs5mjl8hsqu::::res://icon.svg<>uid://3a3goufrtr1x::::res://Resources/testing_player_data.tres<>uid://ci2bfhx80632r::::res://Sprites/character_test-Sheet.png<>uid://6hsq1f25an7d::::res://Resources/default_input_data.tres<>res://Scenes/players/KickHitBox.gd<>uid://6vlyibalqp50::::res://sfx/footstep_wood_004.ogg<>uid://c1ow66wc4ru8k::::res://sfx/impactSoft_heavy_000.ogg
+::res://Scenes/UI/::1695913003
 goal_ui.gd::GDScript::-1::1695905497::0::1::::<>ColorRect<>::
-goal_ui.tscn::PackedScene::5819880414794204154::1695910448::0::1::::<><>::res://Scenes/UI/goal_ui.gd
+goal_ui.tscn::PackedScene::5819880414794204154::1695913003::0::1::::<><>::res://Scenes/UI/goal_ui.gd
 ::res://sfx/::1695910695
 1.ogg::AudioStreamOggVorbis::5339539816482107641::1695909250::1695909254::1::::<><>::
 2.ogg::AudioStreamOggVorbis::3326420928614322815::1695909250::1695909254::1::::<><>::
